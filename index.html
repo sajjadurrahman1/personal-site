@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>personal portfolio of sajjad</title>
+    <script src="https://kit.fontawesome.com/576fd01f59.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" alt="">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aprentice</p>
+                <h1>Hi, I am <span>sajjad</span> <br>I am from Germany.</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----about section------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="images/user.png" alt=""></div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quidem inventore eaque fuga
+                        nostrum beatae laborum, quo id accusamus aliquam, dolores atque repudiandae minima mollitia odio
+                        numquam animi veniam sunt?</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="content active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Videography/Video Editing</li>
+                            <li><span>Data Analyst</span><br>Data visualisation/Data Editing</li>
+                            <li><span>Web Developer</span><br>Website Development</li>
+                        </ul>
+                    </div>
+                    <div class="content" id="Experience">
+                        <ul>
+                            <li><span>c/c++</span><br>coding/styling</li>
+                            <li><span>Data Analyst</span><br>Data visualisation/Data Editing</li>
+                            <li><span>Web Developer</span><br>Website Development</li>
+                        </ul>
+                    </div>
+                    <div class="content" id="Education">
+                        <ul>
+                            <li><span>i will change later</span><br>Videography/Video Editing</li>
+                            <li><span>Data Analyst</span><br>Data visualisation/Data Editing</li>
+                            <li><span>Web Developer</span><br>Website Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----services--- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet tenetur, animi aperiam natus fuga
+                        molestias modi aliquid excepturi dolore repellendus quo! Similique sunt ratione expedita animi
+                        temporibus fuga nemo cum.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>python learner</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet tenetur, animi aperiam natus fuga
+                        molestias modi aliquid excepturi dolore repellendus quo! Similique sunt ratione expedita animi
+                        temporibus fuga nemo cum.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Data Analyst</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet tenetur, animi aperiam natus fuga
+                        molestias modi aliquid excepturi dolore repellendus quo! Similique sunt ratione expedita animi
+                        temporibus fuga nemo cum.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---portfolio--- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus ipsum
+                            consequatur quibusdam ab suscipit!</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Browsing App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus ipsum
+                            consequatur quibusdam ab suscipit!</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Gaming App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus ipsum
+                            consequatur quibusdam ab suscipit!</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="buton">see more</a>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("content");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+
+
+
+        // var tablinks = document.getElementsByclassname("tab-links");
+        // var tabcontent = document.getElementsByclassname("content");
+        // function opentab(tabname) {
+        //     for (tablink of tablinks) {
+        //         tablink.classList.remove("active-link");
+        //     }
+        //     for (tabcontent of contents) {
+        //         tabcontent.classList.remove("active-tab");
+        //     }
+
+        // }
+
+    </script>
+
+</body>
+
+</html>
