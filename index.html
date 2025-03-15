@@ -13,16 +13,18 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo" alt="">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">contact</a></li>
+                <img src="images/logo.png" class="logo" alt="Logo">
+                <ul id="menu-bar">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark icon close-icon" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars icon" onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
+            <div class=" header-text">
                 <p>Aprentice</p>
                 <h1>Hi, I am <span>sajjad</span> <br>I am from Germany.</h1>
             </div>
@@ -153,20 +155,25 @@
                         <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#" target="_blank"><i class="fa-brands fa-xing"></i></a>
 
+
                     </div>
+                    <a class="buton btn" href="images/my-cv.pdf" download>Download Cv</a>
                 </div>
                 <div class="contact-right">
                     <form action="">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="buton btn">Submit</button>
 
 
 
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ Sajjad.</p>
         </div>
     </div>
 
@@ -242,6 +249,18 @@
 
         // }
 
+    </script>
+
+    <script>
+        var menubar = document.getElementById("menu-bar");
+
+        function openmenu() {
+            menubar.style.right = "0";
+        }
+
+        function closemenu() {
+            menubar.style.right = "-200px";
+        }
     </script>
 
 </body>
